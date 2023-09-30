@@ -1,0 +1,23 @@
+<p>register works!</p>
+<form #addForm="ngForm">
+    <h2>Krijo nje llogari</h2>
+    <div class="mb-3">
+        <label class="form-label">Emri*</label>
+        <input name="name" class="form-control" required  [(ngModel)]="registerForm.name" type="text">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Mbiemri*</label>
+        <input  name="surname" class="form-control" required  [(ngModel)]="registerForm.surname" type="text">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Email*</label>
+        <input name="email" class="form-control" required  [(ngModel)]="registerForm.email" type="email">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Password*</label>
+        <input name="password" class="form-control" required  [(ngModel)]="registerForm.password" type="password">
+    </div>
+    <div class="mb-3">
+        <button (click)="submit()" [disabled]="addForm.invalid" class="btn btn-primary">Submit</button>
+    </div>
+</form>
